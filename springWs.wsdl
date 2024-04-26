@@ -1,0 +1,199 @@
+<wsdl:definitions
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:sch="http://andresqz.io.github/ws"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://andresqz.io.github/ws" targetNamespace="http://andresqz.io.github/ws">
+	<wsdl:types>
+		<xs:schema
+			xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://andresqz.io.github/ws">
+			<xs:element name="abilitiesRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="name" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="abilitiesResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" name="abilities" type="tns:abilitiesMetadata"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="baseExperienceRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="name" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="baseExperienceResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="baseExperience" type="xs:long"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="idRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="name" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="idResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="id" type="xs:long"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="locationAreaRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="name" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="locationAreaResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="locationArea" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="nameRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="name" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="nameResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="name" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:complexType name="abilitiesMetadata">
+				<xs:sequence>
+					<xs:element name="slot" type="xs:long"/>
+					<xs:element name="is_hidden" type="xs:boolean"/>
+					<xs:element name="ability" type="tns:ability"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ability">
+				<xs:sequence>
+					<xs:element name="name" type="xs:string"/>
+					<xs:element name="url" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="abilitiesRequest">
+		<wsdl:part element="tns:abilitiesRequest" name="abilitiesRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="idRequest">
+		<wsdl:part element="tns:idRequest" name="idRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="locationAreaResponse">
+		<wsdl:part element="tns:locationAreaResponse" name="locationAreaResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="nameRequest">
+		<wsdl:part element="tns:nameRequest" name="nameRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="abilitiesResponse">
+		<wsdl:part element="tns:abilitiesResponse" name="abilitiesResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="nameResponse">
+		<wsdl:part element="tns:nameResponse" name="nameResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="locationAreaRequest">
+		<wsdl:part element="tns:locationAreaRequest" name="locationAreaRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="baseExperienceRequest">
+		<wsdl:part element="tns:baseExperienceRequest" name="baseExperienceRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="idResponse">
+		<wsdl:part element="tns:idResponse" name="idResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="baseExperienceResponse">
+		<wsdl:part element="tns:baseExperienceResponse" name="baseExperienceResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="PokemonPort">
+		<wsdl:operation name="abilities">
+			<wsdl:input message="tns:abilitiesRequest" name="abilitiesRequest"></wsdl:input>
+			<wsdl:output message="tns:abilitiesResponse" name="abilitiesResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="id">
+			<wsdl:input message="tns:idRequest" name="idRequest"></wsdl:input>
+			<wsdl:output message="tns:idResponse" name="idResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="locationArea">
+			<wsdl:input message="tns:locationAreaRequest" name="locationAreaRequest"></wsdl:input>
+			<wsdl:output message="tns:locationAreaResponse" name="locationAreaResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="name">
+			<wsdl:input message="tns:nameRequest" name="nameRequest"></wsdl:input>
+			<wsdl:output message="tns:nameResponse" name="nameResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="baseExperience">
+			<wsdl:input message="tns:baseExperienceRequest" name="baseExperienceRequest"></wsdl:input>
+			<wsdl:output message="tns:baseExperienceResponse" name="baseExperienceResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="PokemonPortSoap11" type="tns:PokemonPort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="abilities">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="abilitiesRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="abilitiesResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="id">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="idRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="idResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="locationArea">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="locationAreaRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="locationAreaResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="name">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="nameRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="nameResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="baseExperience">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="baseExperienceRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="baseExperienceResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="PokemonPortService">
+		<wsdl:port binding="tns:PokemonPortSoap11" name="PokemonPortSoap11">
+			<soap:address location="http://localhost:8080/ws"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

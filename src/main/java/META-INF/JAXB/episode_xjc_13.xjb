@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2024.04.21 a las 12:08:19 PM CDT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://andresqz.io.github/ws">
+    <schemaBindings map="false">
+      <package name="github.io.andresqz.ws"/>
+    </schemaBindings>
+    <bindings scd="tns:getCountryRequest">
+      <class ref="github.io.andresqz.ws.GetCountryRequest"/>
+    </bindings>
+    <bindings scd="tns:getCountryResponse">
+      <class ref="github.io.andresqz.ws.GetCountryResponse"/>
+    </bindings>
+    <bindings scd="~tns:country">
+      <class ref="github.io.andresqz.ws.Country"/>
+    </bindings>
+    <bindings scd="tns:getAbilitiesRequest">
+      <class ref="github.io.andresqz.ws.GetAbilitiesRequest"/>
+    </bindings>
+    <bindings scd="tns:getAbilitiesResponse">
+      <class ref="github.io.andresqz.ws.GetAbilitiesResponse"/>
+    </bindings>
+    <bindings scd="~tns:abilities">
+      <class ref="github.io.andresqz.ws.Abilities"/>
+    </bindings>
+    <bindings scd="~tns:abilitiesResponse">
+      <class ref="github.io.andresqz.ws.AbilitiesResponse"/>
+    </bindings>
+    <bindings scd="~tns:ability">
+      <class ref="github.io.andresqz.ws.Ability"/>
+    </bindings>
+    <bindings scd="~tns:currency">
+      <typesafeEnumClass ref="github.io.andresqz.ws.Currency"/>
+    </bindings>
+  </bindings>
+</bindings>
+

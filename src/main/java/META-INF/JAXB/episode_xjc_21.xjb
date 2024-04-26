@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2024.04.21 a las 01:17:34 PM CDT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://andresqz.io.github/ws">
+    <schemaBindings map="false">
+      <package name="github.io.andresqz.ws"/>
+    </schemaBindings>
+    <bindings scd="tns:getCountryRequest">
+      <class ref="github.io.andresqz.ws.GetCountryRequest"/>
+    </bindings>
+    <bindings scd="tns:getCountryResponse">
+      <class ref="github.io.andresqz.ws.GetCountryResponse"/>
+    </bindings>
+    <bindings scd="~tns:country">
+      <class ref="github.io.andresqz.ws.Country"/>
+    </bindings>
+    <bindings scd="tns:getAbilitiesRequest">
+      <class ref="github.io.andresqz.ws.GetAbilitiesRequest"/>
+    </bindings>
+    <bindings scd="tns:getAbilitiesResponse">
+      <class ref="github.io.andresqz.ws.GetAbilitiesResponse"/>
+    </bindings>
+    <bindings scd="~tns:abilities">
+      <class ref="github.io.andresqz.ws.Abilities"/>
+    </bindings>
+    <bindings scd="~tns:abilitiesResponse">
+      <class ref="github.io.andresqz.ws.AbilitiesResponse"/>
+    </bindings>
+    <bindings scd="~tns:ability">
+      <class ref="github.io.andresqz.ws.Ability"/>
+    </bindings>
+    <bindings scd="~tns:currency">
+      <typesafeEnumClass ref="github.io.andresqz.ws.Currency"/>
+    </bindings>
+  </bindings>
+</bindings>
+

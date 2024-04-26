@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2024.04.20 a las 02:53:13 PM CDT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://andresqz.io.github">
+    <schemaBindings map="false">
+      <package name="github.io.andresqz"/>
+    </schemaBindings>
+    <bindings scd="tns:getCountryRequest">
+      <class ref="github.io.andresqz.GetCountryRequest"/>
+    </bindings>
+    <bindings scd="tns:getCountryResponse">
+      <class ref="github.io.andresqz.GetCountryResponse"/>
+    </bindings>
+    <bindings scd="~tns:country">
+      <class ref="github.io.andresqz.Country"/>
+    </bindings>
+    <bindings scd="~tns:currency">
+      <typesafeEnumClass ref="github.io.andresqz.Currency"/>
+    </bindings>
+  </bindings>
+</bindings>
+
